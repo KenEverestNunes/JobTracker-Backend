@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Debug logs ###
+*.log
+*_log.txt
+full_backend_log.txt
+backend_debug_log.txt
+backend_debug_log_utf8.txt
+error_log.txt
