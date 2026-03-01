@@ -9,7 +9,9 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private final String SECRET = "this-is-a-very-long-secret-key-change-it";
+    private final String SECRET = System.getenv("JWT_SECRET") != null
+            ? System.getenv("JWT_SECRET")
+            : "this-is-a-very-long-secret-key-change-it";
     private final long EXPIRATION = 1000 * 60 * 60; // 1 hour
 
     private Key getSigningKey() {
